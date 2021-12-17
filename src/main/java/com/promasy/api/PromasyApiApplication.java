@@ -22,7 +22,7 @@ public class PromasyApiApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://promasy-ui.herokuapp.com");
+				registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE").allowedOrigins("https://promasy-ui.herokuapp.com");
 			}
 		};
 	}
