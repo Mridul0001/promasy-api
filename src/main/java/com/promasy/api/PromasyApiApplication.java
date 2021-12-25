@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
+/**
+ * Security not implemented yet. Busy with interview preps :)*/
 @SpringBootApplication
 @EnableMongoRepositories
 public class PromasyApiApplication {
@@ -17,6 +18,7 @@ public class PromasyApiApplication {
 		SpringApplication.run(PromasyApiApplication.class, args);
 	}
 
+	//Adding CORS handling method, at present it accepts all origins for GET,POST,PUT,DELETE
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
