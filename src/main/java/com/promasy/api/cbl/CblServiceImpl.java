@@ -24,4 +24,9 @@ public class CblServiceImpl implements CblService{
         orderRepository.save(orderModel);
         return orderModel;
     }
+
+    @Override
+    public OrderModel getOrderById(int orderId) {
+        return orderRepository.findOrderById(orderId);
+    }
 }
