@@ -35,4 +35,14 @@ public class CblController {
             return new ResponseEntity(GlobalConstants.COMMON_ERROR_MESSAGE, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/getorder/{orderId}")
+    public ResponseEntity getOrder(@PathVariable(name = "orderId") int orderId){
+        try{
+            return new ResponseEntity<OrderModel>(cblService.getOrderById(orderId),HttpStatus.OK);
+        }catch (Exception e){
+            //Adding general exception for now. Might need to configure in future
+            return new ResponseEntity(GlobalConstants.COMMON_ERROR_MESSAGE, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
