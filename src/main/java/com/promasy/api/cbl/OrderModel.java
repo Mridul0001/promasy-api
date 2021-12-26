@@ -5,17 +5,13 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Getter
 @Setter
-@Document("cbl")
-public class CblModel {
+@Document("orders")
+public class OrderModel {
     @Id
-    String id;
-    String name;
-    String desc;
-    List<String> colors;
-    HashMap<String,Integer> sizes;
+    int id;
+    List<SingleOrderModel> order;
 }

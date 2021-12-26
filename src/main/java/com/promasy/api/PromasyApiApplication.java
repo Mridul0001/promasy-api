@@ -24,7 +24,7 @@ public class PromasyApiApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE").allowedOrigins("https://promasy-ui.herokuapp.com");
+				registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "DELETE").allowedOrigins("https://promasy-ui.herokuapp.com","https://mridul-angular.herokuapp.com","http://localhost:4200");
 			}
 		};
 	}

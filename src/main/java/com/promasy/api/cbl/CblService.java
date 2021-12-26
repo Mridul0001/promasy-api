@@ -4,4 +4,5 @@ import java.util.List;
 
 public interface CblService {
     List<CblModel> getAllProjects();
+    OrderModel placeOrder(OrderModel orderModel);
 }
